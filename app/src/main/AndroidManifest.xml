@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eduecon">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EduEcon">
+        <activity android:name=".UI.PasarModalActivity"></activity>
+        <activity android:name=".UI.StrukturPasarActivity" />
+        <activity android:name=".UI.ElastisitasHargaActivity" />
+        <activity android:name=".UI.OtoritasJasaActivity" />
+        <activity android:name=".UI.NonBankActivity" />
+        <activity android:name=".UI.BankActivity" />
+        <activity android:name=".UI.KeseimbanganPasarActivity" />
+        <activity android:name=".UI.PenawaranActivity" />
+        <activity android:name=".UI.PermintaanActivity" />
+        <activity android:name=".UI.ModelDiagramActivity" />
+        <activity android:name=".UI.DistribusiDanKonsumsiActivity" />
+        <activity android:name=".UI.ProduksiKegiatanEkonomiActivity" />
+        <activity android:name=".UI.SistemEkonomiIndonesiaActivity" />
+        <activity android:name=".UI.SistemEkonomiActivity" />
+        <activity android:name=".UI.MasalahEkonomiActivity" />
+        <activity android:name=".UI.BiayaPeluangActivity" />
+        <activity android:name=".UI.KelangkaanActivity" />
+        <activity android:name=".UI.IlmuEkonomiActivity" />
+        <activity android:name=".UI.GetStartedActivity" />
+        <activity android:name=".UI.ViewPagerActivity" />
+        <activity android:name=".UI.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.MainActivity" />
+    </application>
+
+</manifest>
