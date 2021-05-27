@@ -9,7 +9,7 @@
     tools:context=".Fragment.QuizFragment">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/quiz"
         android:layout_width="330dp"
         android:layout_height="185dp"
         android:background="@drawable/quiz"
@@ -18,9 +18,10 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        android:contentDescription="@string/todo" />
 
     <ImageView
+        android:id="@+id/tts"
         android:layout_width="330dp"
         android:layout_height="185dp"
         android:background="@drawable/tts"
@@ -28,7 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintTop_toBottomOf="@+id/quiz"
+        app:layout_constraintVertical_bias="0.404"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

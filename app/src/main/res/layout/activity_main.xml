@@ -24,6 +24,6 @@
         app:mbn_countBackgroundColor="#ff6f00"
         app:mbn_defaultIconColor="#88C5FF"
         app:mbn_backgroundBottomColor="@color/white"
-        android:background="#88C5FF"/>
+        android:background="#FFFFFF"/>
 
 </LinearLayout>

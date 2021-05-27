@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EduEcon">
-        <activity android:name=".UI.PasarModalActivity"></activity>
+        <activity android:name=".UI.QuizActivity"></activity>
+        <activity android:name=".htmlActivity" />
+        <activity android:name=".UI.PasarModalActivity" />
         <activity android:name=".UI.StrukturPasarActivity" />
         <activity android:name=".UI.ElastisitasHargaActivity" />
         <activity android:name=".UI.OtoritasJasaActivity" />

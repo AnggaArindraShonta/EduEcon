@@ -14,6 +14,7 @@ import com.example.eduecon.R;
 import com.example.eduecon.UI.BankActivity;
 import com.example.eduecon.UI.BiayaPeluangActivity;
 import com.example.eduecon.UI.DistribusiDanKonsumsiActivity;
+import com.example.eduecon.UI.ElastisitasHargaActivity;
 import com.example.eduecon.UI.IlmuEkonomiActivity;
 import com.example.eduecon.UI.KelangkaanActivity;
 import com.example.eduecon.UI.KeseimbanganPasarActivity;
@@ -21,11 +22,13 @@ import com.example.eduecon.UI.MasalahEkonomiActivity;
 import com.example.eduecon.UI.ModelDiagramActivity;
 import com.example.eduecon.UI.NonBankActivity;
 import com.example.eduecon.UI.OtoritasJasaActivity;
+import com.example.eduecon.UI.PasarModalActivity;
 import com.example.eduecon.UI.PenawaranActivity;
 import com.example.eduecon.UI.PermintaanActivity;
 import com.example.eduecon.UI.ProduksiKegiatanEkonomiActivity;
 import com.example.eduecon.UI.SistemEkonomiActivity;
 import com.example.eduecon.UI.SistemEkonomiIndonesiaActivity;
+import com.example.eduecon.UI.StrukturPasarActivity;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -60,10 +63,10 @@ public class CourseFragment extends Fragment {
         m12= view.findViewById(R.id.keseimbanganpasar);
         m13= view.findViewById(R.id.bank);
         m14= view.findViewById(R.id.nonbank);
-        m15= view.findViewById(R.id.keseimbanganpasar);
-        m16= view.findViewById(R.id.keseimbanganpasar);
+        m15= view.findViewById(R.id.elastisitasharga);
+        m16= view.findViewById(R.id.strukturpasar);
         m17= view.findViewById(R.id.otoritasjasa);
-        m18= view.findViewById(R.id.keseimbanganpasar);
+        m18= view.findViewById(R.id.pasarmodal);
         m1.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), IlmuEkonomiActivity.class);
             startActivity(intent);
@@ -121,11 +124,11 @@ public class CourseFragment extends Fragment {
             startActivity(intent);
         });
         m15.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), ModelDiagramActivity.class);
+            Intent intent = new Intent(getActivity(), ElastisitasHargaActivity.class);
             startActivity(intent);
         });
         m16.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), PermintaanActivity.class);
+            Intent intent = new Intent(getActivity(), StrukturPasarActivity.class);
             startActivity(intent);
         });
         m17.setOnClickListener(v -> {
@@ -133,7 +136,7 @@ public class CourseFragment extends Fragment {
             startActivity(intent);
         });
         m18.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), KeseimbanganPasarActivity.class);
+            Intent intent = new Intent(getActivity(), PasarModalActivity.class);
             startActivity(intent);
         });
     }

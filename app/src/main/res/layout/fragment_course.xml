@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.CourseFragment">
 
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -25,22 +25,39 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppinsmedium"
-        android:text="Hey,\nWhat would you like to learn\ntoday ?"
+        android:text="Hey,"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="What would you like to learn\ntoday ?"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/textView1"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/ic_search"
         android:elevation="20dp"
         app:queryHint="Search" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/courseb" />
 
     <RelativeLayout
         android:id="@+id/s"
@@ -49,17 +66,11 @@
         android:layout_below="@id/searchView2"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp">
 
         <include layout="@layout/slider_main" />
     </RelativeLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="420dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/courseb" />
 
     <TextView
         android:id="@+id/txcourse"
@@ -67,13 +78,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/s"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="My Course"
-        android:textColor="#FFFFFF"
+        android:textColor="#575757"
         android:textSize="25sp" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txcourse"
@@ -368,6 +380,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/elastisitasharga"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -377,11 +390,12 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/c17" />
+                        android:src="@drawable/c15" />
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/strukturpasar"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -393,7 +407,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/c18" />
+                        android:src="@drawable/c16" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -415,11 +429,12 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/c15" />
+                        android:src="@drawable/c17" />
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/pasarmodal"
                     android:layout_width="157dp"
                     android:layout_height="158dp"
                     android:layout_marginStart="20dp"
@@ -431,11 +446,15 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/c16" />
+                        android:src="@drawable/c18" />
 
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
 
         </LinearLayout>
     </ScrollView>
