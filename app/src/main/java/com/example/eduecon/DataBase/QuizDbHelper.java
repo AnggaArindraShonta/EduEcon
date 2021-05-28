@@ -89,7 +89,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 question.setOption5(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION5)));
                 question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NR)));
                 questionList.add(question);
-            } while (c.moveToFirst());
+            } while (c.moveToNext());
         }
 
         c.close();
