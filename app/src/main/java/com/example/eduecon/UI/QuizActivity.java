@@ -205,66 +205,20 @@ public class QuizActivity extends AppCompatActivity {
 
         switch (currentQuestion.getAnswerNr()) {
             case 1:
-                if (answerNr == currentQuestion.getAnswerNr()) {
-                    rb1.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("Answer is correct");
-                }else{
-                    textViewQuestion.setText("Answer is incorrect");
-
-                }
+                rb1.setTextColor(Color.GREEN);
                 break;
             case 2:
-                if (answerNr == currentQuestion.getAnswerNr()) {
-                    rb2.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("Answer is correct");
-                }else{
-                    textViewQuestion.setText("Answer is incorrect");
-
-                }
+                rb2.setTextColor(Color.GREEN);
                 break;
             case 3:
-                if (answerNr == currentQuestion.getAnswerNr()) {
-                    rb3.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("Answer is correct");
-                }else{
-                    textViewQuestion.setText("Answer is incorrect");
-
-                }
+                rb3.setTextColor(Color.GREEN);
                 break;
             case 4:
-                if (answerNr == currentQuestion.getAnswerNr()) {
-                    rb4.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("Answer is correct");
-                }else{
-                    textViewQuestion.setText("Answer is incorrect");
-
-                }
+                rb4.setTextColor(Color.GREEN);
                 break;
             case 5:
-                if (answerNr == currentQuestion.getAnswerNr()) {
-                    rb5.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("Answer is correct");
-                }else{
-                    textViewQuestion.setText("Answer is incorrect");
-
-                }
+                rb5.setTextColor(Color.GREEN);
                 break;
-//            case 2:
-//                rb2.setTextColor(Color.GREEN);
-//                textViewQuestion.setText("Answer is correct");
-//                break;
-//            case 3:
-//                rb3.setTextColor(Color.GREEN);
-//                textViewQuestion.setText("Answer is correct");
-//                break;
-//            case 4:
-//                rb4.setTextColor(Color.GREEN);
-//                textViewQuestion.setText("Answer is correct");
-//                break;
-//            case 5:
-//                rb5.setTextColor(Color.GREEN);
-//                textViewQuestion.setText("Answer is correct");
-//                break;
         }
 
         if (questionCounter < questionCountTotal) {
