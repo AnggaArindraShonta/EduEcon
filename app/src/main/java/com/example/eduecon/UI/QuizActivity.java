@@ -200,7 +200,7 @@ public class QuizActivity extends AppCompatActivity {
         rb5.setTextColor(Color.RED);
 
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
-        int answerNr = rbGroup.indexOfChild(rbSelected);
+        int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
 
         if (answerNr == currentQuestion.getAnswerNr()) {
             textViewQuestion.setText("Answer is correct");
