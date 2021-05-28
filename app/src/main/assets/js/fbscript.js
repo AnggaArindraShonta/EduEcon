@@ -224,17 +224,7 @@ function isBelowIE8(){
 				var iVersion = parseInt(sTridentWithVersion.replace("trident/",""));
 				
 				$.browser.version = iVersion + 4;
-			}  else{
-				// edge/12.000
-				aIEWithVersion = sUserAgent.match(/edge\/\d+\.0/);
-				if(aIEWithVersion != null && aIEWithVersion.length > 0){
-				
-					var sTridentWithVersion = aIEWithVersion[0];
-					var iVersion = parseInt(sTridentWithVersion.replace("edge/",""));
-					
-					$.browser.version = iVersion;
-				}
-			}
+			} 
 		}else{
 			
 			var sIEWithVersion = aIEWithVersion[0];
