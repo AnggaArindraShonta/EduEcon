@@ -49,7 +49,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("A is correct", "A", "B", "C", "D", "E", 1);
+        Question q1 = new Question("Kata ekonomi berasal dari 'oikonomia', yang berarti...", "Kebutuhan manusia", "Pengaturan rumah tangga", "Pengaturan kekayaan", "Kelangkaan", "Kemakmuran", 2);
         addQuestion(q1);
         Question q2 = new Question("B is correct", "A", "B", "C", "D", "E", 2);
         addQuestion(q2);

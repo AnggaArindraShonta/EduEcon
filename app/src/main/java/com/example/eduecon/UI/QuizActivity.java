@@ -1,13 +1,11 @@
 package com.example.eduecon.UI;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -21,7 +19,6 @@ import com.example.eduecon.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
@@ -104,18 +101,15 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
 
-        buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!answered) {
-                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked() || rb5.isChecked()) {
-                        checkAnswer();
-                    } else {
-                        Toast.makeText(QuizActivity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
-                    }
+        buttonConfirmNext.setOnClickListener(v -> {
+            if (!answered) {
+                if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked() || rb5.isChecked()) {
+                    checkAnswer();
                 } else {
-                    showNextQuestions();
+                    Toast.makeText(QuizActivity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
                 }
+            } else {
+                showNextQuestions();
             }
         });
     }
@@ -205,27 +199,72 @@ public class QuizActivity extends AppCompatActivity {
         rb4.setTextColor(Color.RED);
         rb5.setTextColor(Color.RED);
 
+
+        RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
+        int answerNr = rbGroup.indexOfChild(rbSelected);
+
         switch (currentQuestion.getAnswerNr()) {
             case 1:
-                rb1.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer is correct");
+                if (answerNr == currentQuestion.getAnswerNr()) {
+                    rb1.setTextColor(Color.GREEN);
+                    textViewQuestion.setText("Answer is correct");
+                }else{
+                    textViewQuestion.setText("Answer is incorrect");
+
+                }
                 break;
             case 2:
-                rb2.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer is correct");
+                if (answerNr == currentQuestion.getAnswerNr()) {
+                    rb2.setTextColor(Color.GREEN);
+                    textViewQuestion.setText("Answer is correct");
+                }else{
+                    textViewQuestion.setText("Answer is incorrect");
+
+                }
                 break;
             case 3:
-                rb3.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer is correct");
+                if (answerNr == currentQuestion.getAnswerNr()) {
+                    rb3.setTextColor(Color.GREEN);
+                    textViewQuestion.setText("Answer is correct");
+                }else{
+                    textViewQuestion.setText("Answer is incorrect");
+
+                }
                 break;
             case 4:
-                rb4.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer is correct");
+                if (answerNr == currentQuestion.getAnswerNr()) {
+                    rb4.setTextColor(Color.GREEN);
+                    textViewQuestion.setText("Answer is correct");
+                }else{
+                    textViewQuestion.setText("Answer is incorrect");
+
+                }
                 break;
             case 5:
-                rb5.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer is correct");
+                if (answerNr == currentQuestion.getAnswerNr()) {
+                    rb5.setTextColor(Color.GREEN);
+                    textViewQuestion.setText("Answer is correct");
+                }else{
+                    textViewQuestion.setText("Answer is incorrect");
+
+                }
                 break;
+//            case 2:
+//                rb2.setTextColor(Color.GREEN);
+//                textViewQuestion.setText("Answer is correct");
+//                break;
+//            case 3:
+//                rb3.setTextColor(Color.GREEN);
+//                textViewQuestion.setText("Answer is correct");
+//                break;
+//            case 4:
+//                rb4.setTextColor(Color.GREEN);
+//                textViewQuestion.setText("Answer is correct");
+//                break;
+//            case 5:
+//                rb5.setTextColor(Color.GREEN);
+//                textViewQuestion.setText("Answer is correct");
+//                break;
         }
 
         if (questionCounter < questionCountTotal) {
