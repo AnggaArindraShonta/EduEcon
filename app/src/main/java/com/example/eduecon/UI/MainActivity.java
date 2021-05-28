@@ -41,18 +41,12 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         fragment = new CourseFragment();
                         break;
-                }
-                switch (item.getId()){
                     case 2:
                         fragment = new EbookFragment();
                         break;
-                }
-                switch (item.getId()){
                     case 3:
                         fragment = new QuizFragment();
                         break;
-                }
-                switch (item.getId()){
                     case 4:
                         fragment = new VideoFragment();
                         break;
