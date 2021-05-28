@@ -22,7 +22,7 @@ public class StrukturPasarActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(Uri.parse("file:///android_asset/strukturpasar.html").toString());
+        webView.loadUrl(Uri.parse("file:///android_asset/strukturpasar/strukturpasar.html").toString());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
