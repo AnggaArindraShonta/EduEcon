@@ -22,7 +22,7 @@ public class DistribusiDanKonsumsiActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(Uri.parse("file:///android_asset/nonbank.html").toString());
+        webView.loadUrl(Uri.parse("file:///android_asset/distribusidankonsumsi/distribusidankonsumsi.html").toString());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 

@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.eduecon.DataBase.QuizDbHelper;
+import com.example.eduecon.DataBase.QuizDbHelper1;
 import com.example.eduecon.Model.Question;
 import com.example.eduecon.R;
 
@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
 
-public class QuizActivity extends AppCompatActivity {
-    private static final long COUNTDOWN_IN_MILLIS = 30000;
+public class Quiz1Activity extends AppCompatActivity {
+    private static final long COUNTDOWN_IN_MILLIS = 60000;
 
     private static final String KEY_SCORE = "keyScore";
     private static final String KEY_QUESTION_COUNT = "keyQuestionCount";
@@ -59,7 +59,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_quiz1);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         textViewQuestion = findViewById(R.id.text_view_question);
@@ -78,7 +78,7 @@ public class QuizActivity extends AppCompatActivity {
         textColorDefaultCd = textViewCountDown.getTextColors();
 
         if (savedInstanceState == null) {
-            QuizDbHelper dbHelper = new QuizDbHelper(this);
+            QuizDbHelper1 dbHelper = new QuizDbHelper1(this);
             questionList = dbHelper.getAllQuestions();
             questionCountTotal = questionList.size();
             Collections.shuffle(questionList);
@@ -106,7 +106,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked() || rb5.isChecked()) {
                     checkAnswer();
                 } else {
-                    Toast.makeText(QuizActivity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Quiz1Activity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
                 }
             } else {
                 showNextQuestions();

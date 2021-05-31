@@ -4,12 +4,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EduEcon">
-        <activity android:name=".UI.QuizActivity"/>
+        <activity android:name=".UI.Quiz8Activity"></activity>
+        <activity android:name=".UI.Quiz7Activity" />
+        <activity android:name=".UI.Quiz6Activity" />
+        <activity android:name=".UI.Quiz5Activity" />
+        <activity android:name=".UI.Quiz4Activity" />
+        <activity android:name=".UI.Quiz3Activity" />
+        <activity android:name=".UI.Quiz2Activity" />
+        <activity android:name=".UI.Quiz1Activity" />
         <activity android:name=".UI.PasarModalActivity" />
         <activity android:name=".UI.StrukturPasarActivity" />
         <activity android:name=".UI.ElastisitasHargaActivity" />
