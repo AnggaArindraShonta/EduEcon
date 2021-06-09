@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_course"
+        android:title="@string/home"
+        app:cnb_backgroundColor="#C84D73E2"
+        app:cnb_iconColor="#ffffff"
+        app:cnb_textColor="#ffffff" />
+
+    <item
+        android:id="@+id/ebook"
+        android:icon="@drawable/ic_ebook"
+        android:title="@string/ebook"
+        app:cnb_backgroundColor="#C84D73E2"
+        app:cnb_iconColor="#ffffff"
+        app:cnb_textColor="#ffffff" />
+
+    <item
+        android:id="@+id/assignment"
+        android:icon="@drawable/ic_assignment"
+        android:title="@string/quiz"
+        app:cnb_backgroundColor="#C84D73E2"
+        app:cnb_iconColor="#ffffff"
+        app:cnb_textColor="#ffffff" />
+
+    <item
+        android:id="@+id/video"
+        android:icon="@drawable/ic_video"
+        android:title="@string/video"
+        app:cnb_backgroundColor="#C84D73E2"
+        app:cnb_iconColor="#ffffff"
+        app:cnb_textColor="#ffffff" />
+
+</menu>

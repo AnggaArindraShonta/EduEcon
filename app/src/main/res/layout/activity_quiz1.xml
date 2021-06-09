@@ -60,6 +60,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/text_view_score"
                     android:layout_marginEnd="50dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:background="@drawable/bgnomor"
                     android:gravity="center"
                     android:text="1/x"

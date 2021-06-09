@@ -51,8 +51,7 @@
                     android:id="@+id/quiz2"
                     android:layout_width="137dp"
                     android:layout_height="158dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="40dp"
                     android:clickable="true"
                     app:cardCornerRadius="20dp">
 
@@ -91,8 +90,7 @@
                     android:id="@+id/quiz4"
                     android:layout_width="137dp"
                     android:layout_height="158dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="40dp"
                     android:clickable="true"
                     app:cardCornerRadius="20dp">
 
@@ -131,8 +129,7 @@
                     android:id="@+id/quiz6"
                     android:layout_width="137dp"
                     android:layout_height="158dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="40dp"
                     android:clickable="true"
                     app:cardCornerRadius="20dp">
 

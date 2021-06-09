@@ -5,6 +5,10 @@
     <string name="start">Got It</string>
     <string name="todo">TODO</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="ebook_list">Ebook List</string>
+    <string name="ebook_list">E-Book List</string>
     <string name="hey">Hey,</string>
+    <string name="home">Home</string>
+    <string name="ebook">Ebook</string>
+    <string name="quiz">Quiz</string>
+    <string name="video">Video</string>
 </resources>

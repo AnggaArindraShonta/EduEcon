@@ -1,63 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/courseb"
     tools:context=".Fragment.VideoFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/ypv_explanation_video"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" />
 
-        <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="false"
+        app:behavior_skipCollapsed="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_video_explanation"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="@drawable/video"
-            android:contentDescription="@string/todo" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_rounded_top_transparent_dark"
+            android:paddingTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_video_explanation" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="@string/hey"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/tv_title_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_bottom_right_yellow"
+            android:paddingStart="24dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="82dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/poppinsregular"
+            android:text="What would you like to watch \ntoday ?"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rv_video_explanation"
+            app:layout_constraintStart_toStartOf="@+id/rv_video_explanation"
+            app:layout_constraintTop_toTopOf="@+id/rv_video_explanation" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/poppinsregular"
-        android:text="What would you like to watch\ntoday ?"
-        android:layout_below="@id/textView"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/ic_search"
-        android:elevation="20dp"
-        app:queryHint="Search" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/courseb"
-        android:contentDescription="@string/todo" />
-
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

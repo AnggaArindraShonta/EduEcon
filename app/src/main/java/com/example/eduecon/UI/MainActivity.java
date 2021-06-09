@@ -3,78 +3,51 @@ package com.example.eduecon.UI;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Toast;
-
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.eduecon.Fragment.CourseFragment;
 import com.example.eduecon.Fragment.EbookFragment;
 import com.example.eduecon.Fragment.QuizFragment;
 import com.example.eduecon.Fragment.VideoFragment;
 import com.example.eduecon.R;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class MainActivity extends AppCompatActivity {
 
-    MeowBottomNavigation bottomNavigation;
+    private Fragment fragment = null;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
-        bottomNavigation = findViewById(R.id.bottom_navigation);
+        ChipNavigationBar chipNavigationBar = findViewById(R.id.chipNavigation);
 
-        bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_course));
-        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_ebook));
-        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_assignment));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.ic_video));
+        chipNavigationBar.setItemSelected(R.id.home, true);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new CourseFragment()).commit();
 
-        bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
-            @Override
-            public void onShowItem(MeowBottomNavigation.Model item) {
+        chipNavigationBar.setOnItemSelectedListener(i -> {
+            switch (i) {
+                case R.id.home:
+                    fragment = new CourseFragment();
+                    break;
+                case R.id.ebook:
+                    fragment = new EbookFragment();
+                    break;
+                case R.id.assignment:
+                    fragment = new QuizFragment();
+                    break;
+                case R.id.video:
+                    fragment = new VideoFragment();
+                    break;
+            }
 
-                Fragment fragment = null;
-
-                switch (item.getId()){
-                    case 1:
-                        fragment = new CourseFragment();
-                        break;
-                    case 2:
-                        fragment = new EbookFragment();
-                        break;
-                    case 3:
-                        fragment = new QuizFragment();
-                        break;
-                    case 4:
-                        fragment = new VideoFragment();
-                        break;
-                }
-                loadFragment(fragment);
+            if (fragment != null) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
             }
         });
-        bottomNavigation.show(1, true);
-
-        bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
-            @Override
-            public void onClickItem(MeowBottomNavigation.Model item) {
-            //    Toast.makeText(getApplicationContext(), "You Clicked" + item.getId(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
-            @Override
-            public void onReselectItem(MeowBottomNavigation.Model item) {
-            //    Toast.makeText(getApplicationContext(), "You Reselected" + item.getId(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void loadFragment(Fragment fragment) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.frame_layout,fragment)
-                .commit();
     }
 }

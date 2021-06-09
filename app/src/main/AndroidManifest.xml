@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EduEcon">
-        <activity android:name=".UI.Quiz8Activity"></activity>
+        <activity android:name=".UI.SIActivity"></activity>
+        <activity android:name=".UI.MasalahPokokActivity" />
+        <activity android:name=".UI.KDActivity2" />
+        <activity android:name=".UI.KDActivity1" />
+        <activity android:name=".UI.ManajemenActivity" />
+        <activity android:name=".UI.PerkoperasianActivity" />
+        <activity android:name=".UI.BadanUsahaActivity" />
+        <activity android:name=".UI.BankSentralActivity" />
+        <activity android:name=".UI.Quiz8Activity" />
         <activity android:name=".UI.Quiz7Activity" />
         <activity android:name=".UI.Quiz6Activity" />
         <activity android:name=".UI.Quiz5Activity" />
