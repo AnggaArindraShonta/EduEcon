@@ -3,6 +3,8 @@ package com.example.eduecon.Fragment;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -15,6 +17,8 @@ import com.example.eduecon.adapter.VideoAdapter;
 import com.example.eduecon.databinding.FragmentVideoBinding;
 import com.example.eduecon.utils.VideoStore;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerFullScreenListener;
+
+import org.jetbrains.annotations.NotNull;
 
 public class VideoFragment extends Fragment {
 
@@ -38,9 +42,10 @@ public class VideoFragment extends Fragment {
     }
 
     @Override
-    protected void onResume() {
+    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         super.onResume();
-        videoAdapter.submitList(VideoStore.getEvalVideos());
+        videoAdapter.submitList(VideoStore.getVideos());
 
         binding.ypvExplanationVideo.addFullScreenListener(new YouTubePlayerFullScreenListener() {
             @Override
@@ -58,24 +63,24 @@ public class VideoFragment extends Fragment {
         binding.rvVideoExplanation.setLayoutManager(new LinearLayoutManager(this));
 
         binding.ypvExplanationVideo.getYouTubePlayerWhenReady(youTubePlayer -> {
-            if (VideoStore.getEvalVideos().isEmpty()) return;
-            youTubePlayer.cueVideo(VideoStore.getEvalVideos().get(0).getVideoId(), 0);
+            if (VideoStore.getVideos().isEmpty()) return;
+            youTubePlayer.cueVideo(VideoStore.getVideos().get(0).getVideoId(), 0);
         });
     }
 
     void toggleFullscreen(boolean isFullscreen) {
         if (isFullscreen) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+            getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
 
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().show();
+            if (getActivity().getSupportActionBar() != null) {
+                requireActivity(). getSupportAction().show();
             }
 
             binding.rvVideoExplanation.setVisibility(View.VISIBLE);
             binding.tvTitleExplanation.setVisibility(View.VISIBLE);
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         } else {
-            getWindow().getDecorView()
+            getActivity().getWindow().getDecorView()
                     .setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
             if (getSupportActionBar() != null) {
@@ -84,7 +89,7 @@ public class VideoFragment extends Fragment {
 
             binding.rvVideoExplanation.setVisibility(View.GONE);
             binding.tvTitleExplanation.setVisibility(View.GONE);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
         this.isNotFullscreen = !isFullscreen;
     }
