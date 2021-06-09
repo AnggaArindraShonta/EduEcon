@@ -35,42 +35,42 @@ public class QuizFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         quiz1= view.findViewById(R.id.quiz1);
         quiz1.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz1Activity.class);
+            Intent intent = new Intent(getContext(), Quiz1Activity.class);
             startActivity(intent);
         });
         quiz2= view.findViewById(R.id.quiz2);
         quiz2.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz2Activity.class);
+            Intent intent = new Intent(getContext(), Quiz2Activity.class);
             startActivity(intent);
         });
         quiz3= view.findViewById(R.id.quiz3);
         quiz3.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz3Activity.class);
+            Intent intent = new Intent(getContext(), Quiz3Activity.class);
             startActivity(intent);
         });
         quiz4= view.findViewById(R.id.quiz4);
         quiz4.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz4Activity.class);
+            Intent intent = new Intent(getContext(), Quiz4Activity.class);
             startActivity(intent);
         });
         quiz5= view.findViewById(R.id.quiz5);
         quiz5.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz5Activity.class);
+            Intent intent = new Intent(getContext(), Quiz5Activity.class);
             startActivity(intent);
         });
         quiz6= view.findViewById(R.id.quiz6);
         quiz6.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz6Activity.class);
+            Intent intent = new Intent(getContext(), Quiz6Activity.class);
             startActivity(intent);
         });
         quiz7= view.findViewById(R.id.quiz7);
         quiz7.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz7Activity.class);
+            Intent intent = new Intent(getContext(), Quiz7Activity.class);
             startActivity(intent);
         });
         quiz8= view.findViewById(R.id.quiz8);
         quiz8.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), Quiz8Activity.class);
+            Intent intent = new Intent(getContext(), Quiz8Activity.class);
             startActivity(intent);
         });
     }
