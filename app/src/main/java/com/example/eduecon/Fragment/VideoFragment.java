@@ -2,17 +2,16 @@ package com.example.eduecon.Fragment;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.eduecon.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.example.eduecon.adapter.VideoAdapter;
 import com.example.eduecon.databinding.FragmentVideoBinding;
 import com.example.eduecon.utils.VideoStore;
@@ -29,7 +28,6 @@ public class VideoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentVideoBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
         videoAdapter = new VideoAdapter();
         getLifecycle().addObserver(binding.ypvExplanationVideo);
@@ -39,6 +37,8 @@ public class VideoFragment extends Fragment {
                     youTubePlayer.loadVideo(evalVideo.getVideoId(), 0)
             );
         });
+
+        return binding.getRoot();
     }
 
     @Override
@@ -60,7 +60,7 @@ public class VideoFragment extends Fragment {
         });
 
         binding.rvVideoExplanation.setAdapter(videoAdapter);
-        binding.rvVideoExplanation.setLayoutManager(new LinearLayoutManager(this));
+        binding.rvVideoExplanation.setLayoutManager(new LinearLayoutManager(getContext()));
 
         binding.ypvExplanationVideo.getYouTubePlayerWhenReady(youTubePlayer -> {
             if (VideoStore.getVideos().isEmpty()) return;
@@ -72,19 +72,19 @@ public class VideoFragment extends Fragment {
         if (isFullscreen) {
             getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
 
-            if (getActivity().getSupportActionBar() != null) {
-                requireActivity(). getSupportAction().show();
+            if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
+                ((AppCompatActivity) getActivity()).getSupportActionBar().show();
             }
 
             binding.rvVideoExplanation.setVisibility(View.VISIBLE);
             binding.tvTitleExplanation.setVisibility(View.VISIBLE);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         } else {
             getActivity().getWindow().getDecorView()
                     .setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().hide();
+            if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
+                ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
             }
 
             binding.rvVideoExplanation.setVisibility(View.GONE);
@@ -92,14 +92,5 @@ public class VideoFragment extends Fragment {
             getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
         this.isNotFullscreen = !isFullscreen;
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (isNotFullscreen) {
-            binding.ypvExplanationVideo.toggleFullScreen();
-        } else {
-            super.onBackPressed();
-        }
     }
 }
