@@ -84,386 +84,380 @@
         android:textColor="#575757"
         android:textSize="25sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txcourse"/>
-
-<!--    <ScrollView-->
-<!--        android:id="@+id/scrollView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/txcourse"-->
-<!--        android:layout_alignParentBottom="true">-->
-
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/constraintLayout2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/ilmuekonomi"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="158dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardBackgroundColor="#D8FEDA"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c1" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/kelangkaan"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c2" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/biayapeluang"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c3" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/masalahekonomi"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c4" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/sistemekonomi"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c5" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/sistemekonomiindonesia"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c6" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/produksikegiatanekonomi"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c7" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/distribusi"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c8" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/modeldiagram"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c9" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/permintaan"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c10" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/penawaran"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c11" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/keseimbanganpasar"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c12" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/bank"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardBackgroundColor="#FFDCDC"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c13" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/nonbank"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c14" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/elastisitasharga"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardBackgroundColor="#FFDCDC"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c15" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/strukturpasar"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c16" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/otoritasjasa"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="180dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c17" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--                <androidx.cardview.widget.CardView-->
-<!--                    android:id="@+id/pasarmodal"-->
-<!--                    android:layout_width="157dp"-->
-<!--                    android:layout_height="158dp"-->
-<!--                    android:layout_marginStart="20dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:clickable="true"-->
-<!--                    app:cardCornerRadius="20dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/c18" />-->
-
-<!--                </androidx.cardview.widget.CardView>-->
-
-<!--            </LinearLayout>-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="10dp"/>-->
-
-<!--        </LinearLayout>-->
-<!--    </ScrollView>-->
-
+        android:layout_below="@id/txcourse"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ilmuekonomi"
+                    android:layout_width="157dp"
+                    android:layout_height="158dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#D8FEDA"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c1" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/kelangkaan"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c2" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/biayapeluang"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c3" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/masalahekonomi"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c4" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sistemekonomi"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c5" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sistemekonomiindonesia"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c6" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/produksikegiatanekonomi"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c7" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/distribusi"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c8" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/modeldiagram"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c9" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/permintaan"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c10" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/penawaran"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c11" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/keseimbanganpasar"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c12" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bank"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#FFDCDC"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c13" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nonbank"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c14" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/elastisitasharga"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#FFDCDC"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c15" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/strukturpasar"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c16" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/otoritasjasa"
+                    android:layout_width="157dp"
+                    android:layout_height="180dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c17" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pasarmodal"
+                    android:layout_width="157dp"
+                    android:layout_height="158dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/c18" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
