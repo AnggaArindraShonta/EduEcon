@@ -9,23 +9,23 @@ public class VideoStore {
 
     public static List<Video> getVideos() {
         List<Video> Videos = new ArrayList<>();
-        Videos.add(new Video("Tari Kipas", "Sulawesi Selatan", "YQYfOvtYBpE"));
-        Videos.add(new Video("Tari Makan Sirih", "Riau", "4O17iPq5dfg"));
-        Videos.add(new Video("Tari Piring", "Sumatera Barat", "yt4SvmjCNNE"));
-        Videos.add(new Video("Tari Lumense", "Sulawesi Tenggara", "5zC8MRqk8OI"));
-        Videos.add(new Video("Tari Pendet", "Bali", "8j9swRxXtCo"));
-        Videos.add(new Video("Tari Gambyong", "Jawa Tengah", "D8sp-WrTqWI"));
-        Videos.add(new Video("Tari Topeng", "Jakarta", "tITtITqAhrQ"));
-        Videos.add(new Video("Tari Saman", "Aceh", "92lM805pfzU"));
-        Videos.add(new Video("Tari Selampit Delapan", "Jambi", "5mLucfGnKUc"));
-        Videos.add(new Video("Tari Baksa Kembang", "Kalimantan Selatan", "vBKDl-GYU7A"));
-        Videos.add(new Video("Tari Gong", "Kalimantan Timur", "A58Rf00gup8"));
-        Videos.add(new Video("Tari Selamat Datang", "Papua", "ZfzfWDiKMfk"));
-        Videos.add(new Video("Tari Golek Menak", "Yogyakarta", "ZISA9LFC1eE"));
-        Videos.add(new Video("Tari Kecak", "Bali", "0Xm6Sqv1cok"));
-        Videos.add(new Video("Tari Tanggai", "Sumatera Selatan", "e_nYxhjHEW4"));
-        Videos.add(new Video("Tari Jaipong", "Jawa Barat", "cc3nf8H1MtA"));
-        Videos.add(new Video("Tari Tor - Tor", "Sumatera Utara", "ZDlVYgo8LVQ"));
+        Videos.add(new Video("Ekonomi", "Produksi, Distribusi, dan Konsumsi", "SUpqfqkQT64"));
+        Videos.add(new Video("Ekonomi", "Perilaku Konsumen", "nyvEH2ULtew"));
+        Videos.add(new Video("Ekonomi", "Keseimbangan Pasar", "VBSf19qrux0"));
+        Videos.add(new Video("Ekonomi", "Permintaan, Penawaran dan Harga Keseimbangan", "5aOTyB1xLK8"));
+        Videos.add(new Video("Ekonomi", "Struktur Pasar", "OvojGdqklC4"));
+        Videos.add(new Video("Ekonomi", "Otoritas Jasa Keuangan", "4Pk6Z_jMy-Q"));
+        Videos.add(new Video("Ekonomi", "Dana Pensiun", "vsUTNU1SpD8"));
+        Videos.add(new Video("Ekonomi", "Pegadaian", "-IGilJya_ok"));
+        Videos.add(new Video("Ekonomi", "Lembaga Pembiayaan", "wMTcDQ19mxY"));
+        Videos.add(new Video("Ekonomi", "Pasar Modal", "HuLzmgK5gU4"));
+        Videos.add(new Video("Ekonomi", "Pengenalan Cinta Asuransi", "v7eiSuZybsY"));
+        Videos.add(new Video("Ekonomi", "Pasar Modal", "HuLzmgK5gU4"));
+        Videos.add(new Video("Ekonomi", "Badan Usaha dalam Perekonomian Negara", "MqxvLIf9RQg"));
+        Videos.add(new Video("Ekonomi", "Koperasi dan Pengelolaannya", "wHb6zvAOPMY"));
+        Videos.add(new Video("Ekonomi", "Bank Sentral", "1zSz1dE4VLc"));
+        Videos.add(new Video("Ekonomi", "Konsep Manajemen", "XXTWWFtStGA"));
+        Videos.add(new Video("Ekonomi", "Manajemen, Unsur Manajemen dan Bidang Manajemen", "Z-G_T4U75OU"));
         return Videos;
     }
 
