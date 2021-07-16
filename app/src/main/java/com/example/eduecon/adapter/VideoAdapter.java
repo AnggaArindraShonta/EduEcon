@@ -11,7 +11,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.eduecon.R;
 import com.example.eduecon.databinding.ItemVideoExplanationBinding;
-import com.example.eduecon.models.Video;
+import com.example.eduecon.Model.Video;
 import com.example.eduecon.utils.RecyclerViewCallback;
 
 import java.util.ArrayList;

@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="Hey,"
         android:textColor="@color/white"
@@ -40,17 +40,17 @@
         android:textColor="@color/white"
         android:textSize="18sp" />
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/ic_search"
-        android:elevation="20dp"
-        app:queryHint="Search" />
+<!--    <androidx.appcompat.widget.SearchView-->
+<!--        android:id="@+id/searchView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/textView1"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:background="@drawable/ic_search"-->
+<!--        android:elevation="20dp"-->
+<!--        app:queryHint="Search" />-->
 
     <ImageView
         android:layout_width="match_parent"
@@ -63,7 +63,7 @@
         android:id="@+id/s"
         android:layout_width="380dp"
         android:layout_height="180dp"
-        android:layout_below="@id/searchView2"
+        android:layout_below="@id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
@@ -79,7 +79,7 @@
         android:layout_below="@id/s"
         android:layout_marginStart="40dp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/poppinsmedium"
+        android:fontFamily="@font/poppinsbold"
         android:text="My Course"
         android:textColor="#575757"
         android:textSize="25sp" />
@@ -120,7 +120,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/kelangkaan"
+                    android:id="@+id/alatpembayaran"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -145,7 +145,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/biayapeluang"
+                    android:id="@+id/bumn"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -198,7 +198,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/sistemekonomiindonesia"
+                    android:id="@+id/sistempembayaran"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -223,7 +223,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/produksikegiatanekonomi"
+                    android:id="@+id/distribusidankonsumsi"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -237,7 +237,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/distribusi"
+                    android:id="@+id/produksikegiatanekonomi"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -262,7 +262,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/modeldiagram"
+                    android:id="@+id/permintaandanpenawaran"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -276,7 +276,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/permintaan"
+                    android:id="@+id/pengelolaanbadanusaha"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -301,7 +301,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/penawaran"
+                    android:id="@+id/keseimbanganpasar"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -315,7 +315,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/keseimbanganpasar"
+                    android:id="@+id/perkoperasian"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -340,7 +340,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/bank"
+                    android:id="@+id/banksentral"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -355,7 +355,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/nonbank"
+                    android:id="@+id/konsepbadanusaha"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:layout_marginStart="20dp"
@@ -380,7 +380,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/elastisitasharga"
+                    android:id="@+id/lembagajasakeuangan"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"
@@ -420,7 +420,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/otoritasjasa"
+                    android:id="@+id/manajemen"
                     android:layout_width="157dp"
                     android:layout_height="180dp"
                     android:clickable="true"

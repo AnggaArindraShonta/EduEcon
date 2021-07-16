@@ -15,5 +15,6 @@ public final class QuizConstract {
         public static final String COLUMN_OPTION4 = "option4";
         public static final String COLUMN_OPTION5 = "option5";
         public static final String COLUMN_ANSWER_NR = "answer_nr";
+        public static final String COLUMN_CATEGORY = "category";
     }
 }

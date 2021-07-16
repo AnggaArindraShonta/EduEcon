@@ -1,9 +1,19 @@
 package com.example.eduecon.Model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+public class Question {
 
-public class Question implements Parcelable {
+    public static final String CATEGORY_QUIZ1 = "Quiz1";
+    public static final String CATEGORY_QUIZ2 = "Quiz2";
+    public static final String CATEGORY_QUIZ3 = "Quiz3";
+    public static final String CATEGORY_QUIZ4 = "Quiz4";
+    public static final String CATEGORY_QUIZ5 = "Quiz5";
+    public static final String CATEGORY_QUIZ6 = "Quiz6";
+    public static final String CATEGORY_QUIZ7 = "Quiz7";
+    public static final String CATEGORY_QUIZ8 = "Quiz8";
+    public static final String CATEGORY_QUIZ9 = "Quiz9";
+    public static final String CATEGORY_QUIZ10 = "Quiz10";
+
+
     private String question;
     private String option1;
     private String option2;
@@ -11,56 +21,51 @@ public class Question implements Parcelable {
     private String option4;
     private String option5;
     private int answerNr;
+    private String category;
 
-    public Question(){}
+    public Question() {
 
-    public Question(String question, String option1, String option2, String option3, String option4, String option5, int answerNr) {
-        this.question = question;
-        this.option1 = option1;
-        this.option2 = option2;
-        this.option3 = option3;
-        this.option4 = option4;
-        this.option5 = option5;
-        this.answerNr = answerNr;
     }
 
-    protected Question(Parcel in) {
-        question = in.readString();
-        option1 = in.readString();
-        option2 = in.readString();
-        option3 = in.readString();
-        option4 = in.readString();
-        option5 = in.readString();
-        answerNr = in.readInt();
+    public static String getCategoryQuiz1() {
+        return CATEGORY_QUIZ1;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(question);
-        dest.writeString(option1);
-        dest.writeString(option2);
-        dest.writeString(option3);
-        dest.writeString(option4);
-        dest.writeString(option5);
-        dest.writeInt(answerNr);
+    public static String getCategoryQuiz2() {
+        return CATEGORY_QUIZ2;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public static String getCategoryQuiz3() {
+        return CATEGORY_QUIZ3;
     }
 
-    public static final Creator<Question> CREATOR = new Creator<Question>() {
-        @Override
-        public Question createFromParcel(Parcel in) {
-            return new Question(in);
-        }
+    public static String getCategoryQuiz4() {
+        return CATEGORY_QUIZ4;
+    }
 
-        @Override
-        public Question[] newArray(int size) {
-            return new Question[size];
-        }
-    };
+    public static String getCategoryQuiz5() {
+        return CATEGORY_QUIZ5;
+    }
+
+    public static String getCategoryQuiz6() {
+        return CATEGORY_QUIZ6;
+    }
+
+    public static String getCategoryQuiz7() {
+        return CATEGORY_QUIZ7;
+    }
+
+    public static String getCategoryQuiz8() {
+        return CATEGORY_QUIZ8;
+    }
+
+    public static String getCategoryQuiz9() {
+        return CATEGORY_QUIZ9;
+    }
+
+    public static String getCategoryQuiz10() {
+        return CATEGORY_QUIZ10;
+    }
 
     public String getQuestion() {
         return question;
@@ -116,5 +121,24 @@ public class Question implements Parcelable {
 
     public void setAnswerNr(int answerNr) {
         this.answerNr = answerNr;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Question(String question, String option1, String option2, String option3, String option4, String option5, int answerNr, String category) {
+        this.question = question;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
+        this.option5 = option5;
+        this.answerNr = answerNr;
+        this.category = category;
     }
 }
