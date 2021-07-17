@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash"
-    tools:context=".UI.SplashActivity">
+    tools:context=".UI.ui.SplashActivity">
 
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/spin_kit"

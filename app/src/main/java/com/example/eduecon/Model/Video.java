@@ -1,23 +1,25 @@
 package com.example.eduecon.Model;
 
 public class Video {
-    private String title, subtitle, videoId;
+    String id, title, timestamp, videoUrl;
 
-    public Video() {
+    public Video(){
+
     }
 
-    public Video(String title, String subtitle, String videoId) {
+    public Video(String id, String title, String timestamp, String videoUrl) {
+        this.id = id;
         this.title = title;
-        this.subtitle = subtitle;
-        this.videoId = videoId;
+        this.timestamp = timestamp;
+        this.videoUrl = videoUrl;
     }
 
-    public String getVideoId() {
-        return videoId;
+    public String getId() {
+        return id;
     }
 
-    public void setVideoId(String videoId) {
-        this.videoId = videoId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -28,20 +30,20 @@ public class Video {
         this.title = title;
     }
 
-    public String getSubtitle() {
-        return subtitle;
+    public String getTimestamp() {
+        return timestamp;
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
     }
 
     public String getVideoUrl() {
-        return "https://youtu.be/" + videoId;
+        return videoUrl;
     }
 
-    public String getImageUrl() {
-        return "https://img.youtube.com/vi/" + videoId + "/0.jpg";
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
+
 }
-

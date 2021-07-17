@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eduecon.R;
-import com.example.eduecon.UI.MainActivity;
+import com.example.eduecon.UI.ui.MainActivity;
 
 public class ResultActivity extends AppCompatActivity {
     TextView txtHighScore;

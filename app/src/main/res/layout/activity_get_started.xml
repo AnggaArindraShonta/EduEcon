@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/getstarted"
-    tools:context=".UI.GetStartedActivity">
+    tools:context=".UI.ui.GetStartedActivity">
 
     <ImageButton
         android:id="@+id/btngetstarted"

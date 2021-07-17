@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.eduecon.Model.Constants;
+import com.example.eduecon.Constract.Constants;
 import com.example.eduecon.R;
 import com.example.eduecon.UI.Quiz.QuizActivity;
 

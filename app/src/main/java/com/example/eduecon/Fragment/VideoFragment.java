@@ -1,96 +1,72 @@
 package com.example.eduecon.Fragment;
 
-import android.content.pm.ActivityInfo;
+import android.Manifest;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.eduecon.adapter.VideoAdapter;
-import com.example.eduecon.databinding.FragmentVideoBinding;
-import com.example.eduecon.utils.VideoStore;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerFullScreenListener;
-
-import org.jetbrains.annotations.NotNull;
+import com.example.eduecon.Model.Video;
+import com.example.eduecon.R;
+import com.example.eduecon.Adapter.VideoAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import java.util.ArrayList;
 
 public class VideoFragment extends Fragment {
 
-    private FragmentVideoBinding binding;
-    private VideoAdapter videoAdapter;
-    private boolean isNotFullscreen = false;
+    private RecyclerView rvVideo;
+    private ArrayList<Video> videoArrayList;
+    private VideoAdapter adapterVideo;
+    private static int REQUEST_CODE=1;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentVideoBinding.inflate(getLayoutInflater());
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        ActivityCompat.requestPermissions(getActivity(), new String[]{
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+        }, REQUEST_CODE);
+        View view = inflater.inflate(R.layout.fragment_video, container, false);
 
-        videoAdapter = new VideoAdapter();
-        getLifecycle().addObserver(binding.ypvExplanationVideo);
+//        setTitle("Videos");
 
-        videoAdapter.setOnItemClickListener((view, evalVideo, position) -> {
-            binding.ypvExplanationVideo.getYouTubePlayerWhenReady(youTubePlayer ->
-                    youTubePlayer.loadVideo(evalVideo.getVideoId(), 0)
-            );
-        });
+        rvVideo = view.findViewById(R.id.rvVideo);
 
-        return binding.getRoot();
+
+        loadVideoFromFirebase();
+        return view;
     }
 
-    @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        super.onResume();
-        videoAdapter.submitList(VideoStore.getVideos());
+    private void loadVideoFromFirebase() {
+        videoArrayList = new ArrayList<>();
 
-        binding.ypvExplanationVideo.addFullScreenListener(new YouTubePlayerFullScreenListener() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Videos");
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onYouTubePlayerEnterFullScreen() {
-                toggleFullscreen(false);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                videoArrayList.clear();
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()) {
+                    Video video = dataSnapshot.getValue(Video.class);
+                    videoArrayList.add(video);
+                }
+                adapterVideo = new VideoAdapter(getContext(), videoArrayList);
+                rvVideo.setAdapter(adapterVideo);
+
             }
 
             @Override
-            public void onYouTubePlayerExitFullScreen() {
-                toggleFullscreen(true);
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
-
-        binding.rvVideoExplanation.setAdapter(videoAdapter);
-        binding.rvVideoExplanation.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        binding.ypvExplanationVideo.getYouTubePlayerWhenReady(youTubePlayer -> {
-            if (VideoStore.getVideos().isEmpty()) return;
-            youTubePlayer.cueVideo(VideoStore.getVideos().get(0).getVideoId(), 0);
-        });
-    }
-
-    void toggleFullscreen(boolean isFullscreen) {
-        if (isFullscreen) {
-            getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-
-            if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
-                ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-            }
-
-            binding.rvVideoExplanation.setVisibility(View.VISIBLE);
-            binding.tvTitleExplanation.setVisibility(View.VISIBLE);
-            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-        } else {
-            getActivity().getWindow().getDecorView()
-                    .setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-
-            if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
-                ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
-            }
-
-            binding.rvVideoExplanation.setVisibility(View.GONE);
-            binding.tvTitleExplanation.setVisibility(View.GONE);
-            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        }
-        this.isNotFullscreen = !isFullscreen;
     }
 }

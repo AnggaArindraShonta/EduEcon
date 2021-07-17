@@ -17,9 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eduecon.DataBase.QuizDbHelper;
-import com.example.eduecon.Model.Question;
+import com.example.eduecon.Constract.Question;
 import com.example.eduecon.R;
-import com.example.eduecon.UI.MainActivity;
+import com.example.eduecon.UI.ui.MainActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -6,13 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.eduecon.Model.Question;
-import com.example.eduecon.Model.QuizConstract;
+import com.example.eduecon.Constract.Question;
+import com.example.eduecon.Constract.QuizConstract;
 
 import java.util.ArrayList;
-
-import static com.example.eduecon.Model.Question.CATEGORY_QUIZ3;
-import static com.example.eduecon.Model.Question.CATEGORY_QUIZ4;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
 
