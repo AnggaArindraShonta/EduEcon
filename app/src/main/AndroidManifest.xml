@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.eduecon">
+    package="com.eduecon.eduecon">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -15,37 +15,37 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.EduEcon">
-        <activity android:name=".UI.Quiz.ResultActivity"/>
-        <activity android:name=".UI.Quiz.QuizActivity" />
-        <activity android:name=".UI.Course.PengelolaanBadanUsahadanPerannyaActivity" />
-        <activity android:name=".UI.Course.ManajemenActivity" />
-        <activity android:name=".UI.Course.PerkoperasianActivity" />
-        <activity android:name=".UI.Course.KonsepBadanUsahaActivity" />
-        <activity android:name=".UI.Course.BankSentralActivity" />
-        <activity android:name=".UI.Course.PasarModalActivity" />
-        <activity android:name=".UI.Course.StrukturPasarActivity" />
-        <activity android:name=".UI.Course.AlatPembayaranActivity" />
-        <activity android:name=".UI.Course.LembagaJasaKeuanganActivity" />
-        <activity android:name=".UI.Course.KeseimbanganPasarActivity" />
-        <activity android:name=".UI.Course.PermintaandanPenawaranActivity" />
-        <activity android:name=".UI.Course.SistemPembayaranActivity" />
-        <activity android:name=".UI.Course.DistribusiDanKonsumsiActivity" />
-        <activity android:name=".UI.Course.ProduksiKegiatanEkonomiActivity" />
-        <activity android:name=".UI.Course.SistemEkonomiActivity" />
-        <activity android:name=".UI.Course.MasalahEkonomiActivity" />
-        <activity android:name=".UI.Course.BumnBumsBumdActivity" />
-        <activity android:name=".UI.Course.IlmuEkonomiActivity" />
-        <activity android:name=".UI.ui.GetStartedActivity" />
-        <activity android:name=".UI.ui.ViewPagerActivity" />
-        <activity android:name=".UI.Ebook.EbookViewActivity" />
-        <activity android:name=".UI.ui.SplashActivity">
+        <activity android:name="com.eduecon.eduecon.UI.Quiz.ResultActivity"/>
+        <activity android:name="com.eduecon.eduecon.UI.Quiz.QuizActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.PengelolaanBadanUsahadanPerannyaActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.ManajemenActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.PerkoperasianActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.KonsepBadanUsahaActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.BankSentralActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.PasarModalActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.StrukturPasarActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.AlatPembayaranActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.LembagaJasaKeuanganActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.KeseimbanganPasarActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.PermintaandanPenawaranActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.SistemPembayaranActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.DistribusiDanKonsumsiActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.ProduksiKegiatanEkonomiActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.SistemEkonomiActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.MasalahEkonomiActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.BumnBumsBumdActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Course.IlmuEkonomiActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.ui.GetStartedActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.ui.ViewPagerActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.Ebook.EbookViewActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.ui.MainActivity" />
+        <activity android:name="com.eduecon.eduecon.UI.ui.MainActivity" />
     </application>
 
 </manifest>
