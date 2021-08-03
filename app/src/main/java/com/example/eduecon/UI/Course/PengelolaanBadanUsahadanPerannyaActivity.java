@@ -37,12 +37,12 @@ public class PengelolaanBadanUsahadanPerannyaActivity extends AppCompatActivity 
         webView.loadUrl("https://flipbox2.000webhostapp.com/pengelolaanbadanusahadanperannya/mobile/index.html");
     }
 
-    @Override
-    public void onBackPressed() {
-        if (webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if (webView.canGoBack()) {
+//            webView.goBack();
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 }
