@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.eduecon",
+  "applicationId": "com.eduecon.app",
   "variantName": "release",
   "elements": [
     {
